@@ -8,12 +8,15 @@ import { AppComponent } from './app.component';
 import { CalculateComponent } from './calculate/calculate.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AppRoutingModule } from "./app-routing-module";
+import { SettingsEditComponent } from './settings/settings-edit/settings-edit.component';
+import { SettingsListService } from './settings/settings-list.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculateComponent,
-    SettingsComponent
+    SettingsComponent,
+    SettingsEditComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { AppRoutingModule } from "./app-routing-module";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SettingsListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
