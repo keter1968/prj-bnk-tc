@@ -3,12 +3,14 @@ import { EventEmitter } from '@angular/core';
 
 export class SettingsListService {
     rateChanged = new EventEmitter<Rate[]>();
-    private rate: Rate[] ;
+    private rates: Rate[] = [];
 
+  getRates() {
+    return this.rates.slice();
+  }
 
-    addRate(rates: Rate) {
-        this.rate.push(rates);
-        this.rateChanged.emit(this.rate.slice());
+    addRate(rate: Rate) {
+        this.rates.push(rate);
+        this.rateChanged.emit(this.rates.slice());
       }
-    
 }

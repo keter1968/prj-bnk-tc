@@ -14,7 +14,7 @@ import { SettingsListService } from '../settings-list.service';
   styleUrls: ['./settings-edit.component.css']
 })
 export class SettingsEditComponent implements OnInit {
-  @ViewChild('nameInput') nameInputRef: ElementRef;
+  @ViewChild('feeInput') feeInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
 
   constructor(private slService: SettingsListService) { }
@@ -23,9 +23,9 @@ export class SettingsEditComponent implements OnInit {
   }
 
   onAddRate() {
-    const ingName = this.nameInputRef.nativeElement.value;
+    const ingFee = this.feeInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;
-    const newRate = new Rate(ingName, ingAmount);
+    const newRate = new Rate(ingFee, ingAmount);
     this.slService.addRate(newRate);
   }
 }
