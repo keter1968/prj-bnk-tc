@@ -2,14 +2,13 @@
   <div class="col-xs-10">
     <app-settings-edit></app-settings-edit>
     <hr>
-    <ul class="list-group">
-      <a
-        class="list-group-item"
-        style="cursor: pointer"
-        *ngFor="let rate of rates"
-      >
-        {{ rate.fee }} ({{ rate.rate }})
-      </a>
-    </ul>
+    <div class="row" *ngFor="let rate of rates">
+      <div class="col-sm-5">
+          {{ rate.fee }}
+      </div>
+      <div class="col-sm-5">
+          {{ rate.rate }}
+      </div>
+    </div>
   </div>
 </div>
