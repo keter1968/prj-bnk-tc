@@ -3,6 +3,7 @@
     <app-settings-edit></app-settings-edit>
     <hr>
     <div class="row" *ngFor="let rate of rates">
+      <!-- <a *ngFor="let rate of rates | order-by:'fee'"> {{rate.fee}}</a> -->
       <div class="col-sm-5">
           {{ rate.fee }}
       </div>

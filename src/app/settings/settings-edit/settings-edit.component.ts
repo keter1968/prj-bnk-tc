@@ -25,7 +25,9 @@ export class SettingsEditComponent implements OnInit {
   onAddRate() {
     const ingFee = this.feeInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;
-    const newRate = new Rate(ingFee, ingAmount);
-    this.slService.addRate(newRate);
+    if (ingFee !=="" && ingAmount !=="" ){
+      const newRate = new Rate(ingFee, ingAmount);
+      this.slService.addRate(newRate);
+    }
   }
 }
