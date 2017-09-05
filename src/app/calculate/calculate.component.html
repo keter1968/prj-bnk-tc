@@ -13,7 +13,7 @@
         </div>
         <div class="col-sm-5 form-group">
           <label for="fee">Número de cuotas</label><br>
-          <select class="form-control" placeholder="Seleccione las cuotas">
+          <select class="form-control">
                 <option *ngFor="let rate of rates" value={{rate.rate}}>{{rate.fee}} ({{rate.rate}}% Mes vencido)</option>
           </select>
         </div>

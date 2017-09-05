@@ -8,6 +8,7 @@ import {
 import { Rate } from '../../rates.model';
 import { SettingsListService } from '../settings-list.service';
 
+
 @Component({
   selector: 'app-settings-edit',
   templateUrl: './settings-edit.component.html',
@@ -25,7 +26,7 @@ export class SettingsEditComponent implements OnInit {
   onAddRate() {
     const ingFee = this.feeInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;
-    if (ingFee !=="" && ingAmount !=="" ){
+    if ((ingFee) && (ingAmount)){
       const newRate = new Rate(ingFee, ingAmount);
       this.slService.addRate(newRate);
     }

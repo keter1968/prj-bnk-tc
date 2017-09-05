@@ -2,8 +2,8 @@
   <div class="col-xs-10">
     <app-settings-edit></app-settings-edit>
     <hr>
-    <div class="row" *ngFor="let rate of rates">
-      <!-- <a *ngFor="let rate of rates | order-by:'fee'"> {{rate.fee}}</a> -->
+    <div class="row"  *ngFor="let rate of (rates | sort)">
+    <!-- <div class="row"  *ngFor="let rate of rates"> -->
       <div class="col-sm-5">
           {{ rate.fee }}
       </div>

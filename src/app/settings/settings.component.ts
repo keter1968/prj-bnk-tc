@@ -1,21 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsListService } from './settings-list.service';
 import { Rate } from '../rates.model';
-import {Injectable, Pipe} from '@angular/core';
-import * as _ from 'lodash';
-
-@Pipe({ name: 'order-by' })
-export class OrderByPipe {
-  transform(array, args) {
-    return _.sortBy(array, args);
-  }
-}
+import { SortPipe } from '../sort.pipe';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })
+
 export class SettingsComponent implements OnInit {
   rates: Rate[];
 
@@ -25,10 +19,9 @@ export class SettingsComponent implements OnInit {
     this.rates = this.slService.getRates();
     this.slService.rateChanged
       .subscribe(
-        (ingredients: Rate[]) => {
-          this.rates = ingredients;
+        (rate: Rate[]) => {
+          this.rates = rate;
         }
       )
   }
-
 }
