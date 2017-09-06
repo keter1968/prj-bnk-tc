@@ -10,19 +10,21 @@ import { SettingsComponent } from './settings/settings.component';
 import { AppRoutingModule } from "./app-routing-module";
 import { SettingsEditComponent } from './settings/settings-edit/settings-edit.component';
 import { SettingsListService } from './settings/settings-list.service';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculateComponent,
     SettingsComponent,
-    SettingsEditComponent
+    SettingsEditComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [SettingsListService],
   bootstrap: [AppComponent]
