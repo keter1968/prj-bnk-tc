@@ -23,6 +23,24 @@ export class SettingsEditComponent implements OnInit {
   ngOnInit() {
   }
 
+  // isNullOrUndefined<T>(obj: T | null | undefined): obj is null | undefined {
+  //   return typeof obj === "undefined" || obj === null;
+  // }
+
+  // isNullOrUndefined<T>(obj?: T | null | undefined): boolean {
+  //   // null == undefined so this is true if obj = null or obj = undefined
+  //   return typeof obj == "undefined" || obj == null;
+  // }
+
+  // onAddRate() {
+  //   const ingFee = this.feeInputRef.nativeElement.value;
+  //   const ingAmount = this.amountInputRef.nativeElement.value;
+  //   if ((!this.isNullOrUndefined(ingFee)) && (!this.isNullOrUndefined(ingAmount))){
+  //     const newRate = new Rate(ingFee, ingAmount);
+  //     this.slService.addRate(newRate);
+  //   }
+  // }
+
   onAddRate() {
     const ingFee = this.feeInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;

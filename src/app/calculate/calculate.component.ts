@@ -15,6 +15,4 @@ export class CalculateComponent implements OnInit {
   ngOnInit() {
     this.rates = this.slService.getRates();
   }
-
-  
 }
